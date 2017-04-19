@@ -13,7 +13,7 @@ var app = {
         // TAKE PICTURE BTN CLICK LISTENER
         document.getElementById("takePictureBtn").addEventListener("click", function(){
             
-            navigator.camera.getPicture(onSuccess, onFail, { quality: 50, allowEdit: true,
+                navigator.camera.getPicture(onSuccess, onFail, { quality: 50, targetWidth: 300, allowEdit: true,
                 destinationType: Camera.DestinationType.FILE_URI });
 
             function onSuccess(imageURI) {
